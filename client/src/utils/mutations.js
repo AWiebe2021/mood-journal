@@ -31,52 +31,10 @@ export const ADD_ENTRY = gql`
       entryText
       createdAt
       username
-      reactionCount
-      reactions {
-        _id
-      }
     }
   }
 `;
 
-export const ADD_REACTION = gql`
-  mutation addReaction($entryId: ID!, $reactionBody: String!) {
-    addReaction(entryId: $entryId, reactionBody: $reactionBody) {
-      _id
-      reactionCount
-      reactions {
-        _id
-        reactionBody
-        createdAt
-        username
-      }
-    }
-  }
-`;
 
-export const ADD_FRIEND = gql`
-  mutation addFriend($id: ID!) {
-    addFriend(friendId: $id) {
-      _id
-      username
-      friendCount
-      friends {
-        _id
-        username
-      }
-    }
-  }
-`;
 
-export const REMOVE_FRIEND = gql`
-  mutation removeFriend($id: ID!) {
-    removeFriend(id: $id) {
-      _id
-      username
-      friends {
-        _id
-        username
-      }
-    }
-  }
-`;
+

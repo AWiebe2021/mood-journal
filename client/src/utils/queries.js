@@ -7,13 +7,6 @@ export const QUERY_ENTRYS = gql`
       entryText
       createdAt
       username
-      reactionCount
-      reactions {
-        _id
-        createdAt
-        username
-        reactionBody
-      }
     }
   }
 `;
@@ -25,13 +18,6 @@ export const QUERY_ENTRY = gql`
       entryText
       createdAt
       username
-      reactionCount
-      reactions {
-        _id
-        createdAt
-        username
-        reactionBody
-      }
     }
   }
 `;
@@ -42,16 +28,10 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      friendCount
-      friends {
-        _id
-        username
-      }
       entrys {
         _id
         entryText
         createdAt
-        reactionCount
       }
     }
   }
@@ -63,22 +43,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      friendCount
       entrys {
         _id
         entryText
         createdAt
-        reactionCount
-        reactions {
-          _id
-          createdAt
-          reactionBody
-          username
-        }
-      }
-      friends {
-        _id
-        username
       }
     }
   }
@@ -90,11 +58,6 @@ export const QUERY_ME_BASIC = gql`
       _id
       username
       email
-      friendCount
-      friends {
-        _id
-        username
-      }
     }
   }
 `;

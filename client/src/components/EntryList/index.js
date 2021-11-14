@@ -25,10 +25,10 @@ const EntryList = ({ entrys, title }) => {
             <div className="card-body">
               <Link to={`/entry/${entry._id}`}>
                 <p>{entry.entryText}</p>
-                <p className="mb-0">
+                {/* <p className="mb-0">
                   Reactions: {entry.reactionCount} || Click to{' '}
                   {entry.reactionCount ? 'see' : 'start'} the discussion!
-                </p>
+                </p> */}
               </Link>
             </div>
           </div>
