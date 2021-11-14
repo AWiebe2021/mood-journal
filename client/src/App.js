@@ -11,8 +11,6 @@ import { setContext } from '@apollo/client/link/context';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Refferal from './components/Refferal';
-import Refferal from './components/Refferal';
-import Refferal from './components/Refferal';
 
 import Home from './pages/Home';
 // import Login from './pages/Login';
