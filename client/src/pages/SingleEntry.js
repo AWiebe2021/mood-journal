@@ -1,18 +1,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-import Auth from '../utils/auth';
+// import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
-import { QUERY_THOUGHT } from '../utils/queries';
+import { QUERY_ENTRY } from '../utils/queries';
 
-const SingleThought = (props) => {
-  const { id: thoughtId } = useParams();
+const SingleEntry = (props) => {
+  const { id: entryId } = useParams();
 
-  const { loading, data } = useQuery(QUERY_THOUGHT, {
-    variables: { id: thoughtId },
+  const { loading, data } = useQuery(QUERY_ENTRY, {
+    variables: { id: entryId },
   });
 
-  const thought = data?.thought || {};
+  const entry = data?.entry || {};
 
   if (loading) {
     return <div>Loading...</div>;
@@ -23,16 +23,16 @@ const SingleThought = (props) => {
       <div className="card mb-3">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
-            {thought.username}
+            {entry.username}
           </span>{' '}
-          thought on {thought.createdAt}
+          entry on {entry.createdAt}
         </p>
         <div className="card-body">
-          <p>{thought.thoughtText}</p>
+          <p>{entry.entryText}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default SingleThought;
+export default SingleEntry;

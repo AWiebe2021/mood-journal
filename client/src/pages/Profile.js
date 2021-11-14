@@ -1,11 +1,11 @@
 import React from 'react';
 import { Redirect, useParams } from 'react-router-dom';
 
-import ThoughtForm from '../components/ThoughtForm';
-import ThoughtList from '../components/ThoughtList';
+import EntryForm from '../components/EntryForm';
+import EntryList from '../components/EntryList';
 
 
-import { useQuery, useMutation } from '@apollo/client';
+import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
 
 import Auth from '../utils/auth';
@@ -44,12 +44,15 @@ const Profile = (props) => {
         <h2 className="bg-dark text-secondary p-3 display-inline-block">
           Viewing {userParam ? `${user.username}'s` : 'your'} profile.
         </h2>
+<<<<<<< HEAD
 
        
+=======
+>>>>>>> 19afa1eed0eac4b9354b330af5cef0955725cd1e
       </div>
-
       <div className="flex-row justify-space-between mb-3">
         <div className="col-12 mb-3 col-lg-8">
+<<<<<<< HEAD
           <ThoughtList
             thoughts={user.thoughts}
             title={`${user.username}'s thoughts...`}
@@ -57,8 +60,15 @@ const Profile = (props) => {
         </div>
 
       
+=======
+          <EntryList
+            entrys={user.entrys}
+            title={`${user.username}'s entrys...`}
+          />
+        </div>
+>>>>>>> 19afa1eed0eac4b9354b330af5cef0955725cd1e
       </div>
-      <div className="mb-3">{!userParam && <ThoughtForm />}</div>
+      <div className="mb-3">{!userParam && <EntryForm />}</div>
     </div>
   );
 };
