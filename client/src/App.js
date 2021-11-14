@@ -10,6 +10,7 @@ import { setContext } from '@apollo/client/link/context';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Refferal from './components/Refferal';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -43,7 +44,11 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Header />
+          
+
           <div className="container">
+            <Refferal />
+          
             <Switch>
               <Route exact path="/" component={Home} />
               <Route exact path="/login" component={Login} />

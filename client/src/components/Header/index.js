@@ -14,14 +14,12 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         
         <Link to="/">
-
         <div class="typewriter">
           <h1>Otter Journal 🦦</h1>
           <p>A journal like no otter.</p>
           </div>
-
         </Link>
-       
+
 
         <nav className="text-center">
           {Auth.loggedIn() ? (
