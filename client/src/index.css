@@ -1,17 +1,17 @@
 :root {
-  --primary: #fffff;
-  --secondary: #AFD2D8;
-  --tertiary: #57B0BA;
-  --quatrinary: #428C96;
-  --light: #B6D7DD;
-  --dark: #005C6D;
-  --error: rgb(228, 46, 1);
-  --border-radius: 0.3rem;
-  --spacing-one: calc(1rem * 0.25);
-  --spacing-two: calc(1rem * 0.5);
-  --spacing-three: 1rem;
-  --spacing-four: calc(1rem * 1.5);
-  --spacing-five: calc(1rem * 3);
+  --primary: #fffff !important;
+  --secondary: #AFD2D8 !important;
+  --tertiary: #57B0BA !important;
+  --quatrinary: #428C96 !important;
+  --light: #B6D7DD !important;
+  --dark: #005C6D !important;
+  --error: rgb(228, 46, 1) !important;
+  --border-radius: 0.3rem !important;
+  --spacing-one: calc(1rem * 0.25) !important;
+  --spacing-two: calc(1rem * 0.5) !important;
+  --spacing-three: 1rem !important;
+  --spacing-four: calc(1rem * 1.5) !important;
+  --spacing-five: calc(1rem * 3) !important;
 }
 
 * {
@@ -30,7 +30,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   font-size: 20px;
-  color: var(--dark);
+  color: var(--dark) !important;
   background-color: #f3fffee1;
 }
 
@@ -48,6 +48,7 @@ h6 {
 
 h1 {
   font-size: 2.25rem;
+  color: var(--dark) !important;
 }
 
 h2 {
@@ -827,7 +828,7 @@ nav a:hover {
 }
 
 .bg-secondary {
-  background-color: var(--secondary);
+  background-color: var(--secondary) !important;
 }
 
 .bg-tertiary {

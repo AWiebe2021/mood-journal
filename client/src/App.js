@@ -13,11 +13,11 @@ import Footer from './components/Footer';
 import Refferal from './components/Refferal';
 
 import Home from './pages/Home';
-import Login from './pages/Login';
+// import Login from './pages/Login';
 import NoMatch from './pages/NoMatch';
 import SingleEntry from './pages/SingleEntry';
 import Profile from './pages/Profile';
-import Signup from './pages/Signup';
+// import Signup from './pages/Signup';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -51,8 +51,8 @@ function App() {
           
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route exact path="/login" component={Login} />
-              <Route exact path="/signup" component={Signup} />
+              {/* <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} /> */}
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/entry/:id" component={SingleEntry} />
 
