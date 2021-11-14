@@ -96,8 +96,8 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color: var(--secondary) !important;
+  background-color: var(--dark) !important;
 }
 .typewriter p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -163,13 +163,14 @@ nav a:hover {
 
 .btn:hover,
 .pill:hover {
-  color: var(--secondary);
-  background-color: var(--dark);
+  color: var(--secondary) !important;
+  background-color: var(--dark) !important;
 }
 
 .btn:hover a,
 .pill:hover a {
-  color: var(--secondary);
+  color: var(--secondary)  !important;
+ 
 }
 
 .btn-inline {
