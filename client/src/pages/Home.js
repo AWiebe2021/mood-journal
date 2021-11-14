@@ -1,16 +1,15 @@
 import React from 'react';
-import ThoughtList from '../components/ThoughtList';
-import ThoughtForm from '../components/ThoughtForm';
-import FriendList from '../components/FriendList';
+import EntryList from '../components/EntryList';
+import EntryForm from '../components/EntryForm';
 
 import Auth from '../utils/auth';
 import { useQuery } from '@apollo/client';
-import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
+import { QUERY_ENTRYS } from '../utils/queries';
 
 const Home = () => {
-  const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const { data: userData } = useQuery(QUERY_ME_BASIC);
-  const thoughts = data?.thoughts || [];
+  const { loading, data } = useQuery(QUERY_ENTRYS);
+  // const { data: userData } = useQuery(QUERY_ME_BASIC);
+  const entrys = data?.entrys || [];
 
   const loggedIn = Auth.loggedIn();
 
@@ -19,28 +18,26 @@ const Home = () => {
       <div className="flex-row justify-space-between">
         {loggedIn && (
           <div className="col-12 mb-3">
-            <ThoughtForm />
+            <EntryForm />
           </div>
         )}
         <div className={`col-12 mb-3 ${loggedIn && 'col-lg-8'}`}>
           {loading ? (
             <div>Loading...</div>
           ) : (
-            <ThoughtList
-              thoughts={thoughts}
-              title="Some Feed for Thought(s)..."
+            <EntryList
+              entrys={entrys}
+              title="Some Feed for Entry(s)..."
             />
           )}
         </div>
-        {loggedIn && userData ? (
+        {/* {loggedIn && userData ? (
           <div className="col-12 col-lg-3 mb-3">
             <FriendList
               username={userData.me.username}
-              friendCount={userData.me.friendCount}
-              friends={userData.me.friends}
-            />
+           />
           </div>
-        ) : null}
+        ) : null} */}
       </div>
     </main>
   );
