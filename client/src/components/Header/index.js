@@ -14,18 +14,10 @@ const Header = () => {
       <div className="container flex-row justify-space-between-lg justify-center align-center">
         
         <Link to="/">
-<<<<<<< HEAD
-=======
-
->>>>>>> 19afa1eed0eac4b9354b330af5cef0955725cd1e
         <div class="typewriter">
           <h1>Otter Journal 🦦</h1>
           <p>A journal like no otter.</p>
           </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 19afa1eed0eac4b9354b330af5cef0955725cd1e
         </Link>
 
 
