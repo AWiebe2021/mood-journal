@@ -12,9 +12,14 @@ const Header = () => {
   return (
     <header className="bg-secondary mb-4 py-2 flex-row align-center">
       <div className="container flex-row justify-space-between-lg justify-center align-center">
+        
         <Link to="/">
-          <h1>Deep Thoughts</h1>
+        <div class="typewriter">
+          <h1>Otter Journal 🦦</h1>
+          <p>A journal like no otter.</p>
+          </div>
         </Link>
+       
 
         <nav className="text-center">
           {Auth.loggedIn() ? (
