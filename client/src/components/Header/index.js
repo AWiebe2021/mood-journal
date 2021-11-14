@@ -26,7 +26,7 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar' />
           <Navbar.Collapse id='navbar'>
-            <Nav className="text-center">
+            <Nav className="text-center"  variant='pills'>
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
@@ -36,7 +36,7 @@ const Header = () => {
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
-                <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
+                <Nav.Link onClick={() => setShowModal(true)} >Login/Sign Up</Nav.Link>
               )}
             </Nav>
           </Navbar.Collapse>

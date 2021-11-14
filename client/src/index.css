@@ -72,28 +72,28 @@ h6 {
 }
 
 p {
-  font-size: 1.1rem;
-  margin-top: 0;
+  font-size: 1.1rem  !important;
+  margin-top: 0  !important;
 }
 
 a {
-  color: var(--dark);
-  text-decoration: none;
+  color: var(--dark)  !important;
+  text-decoration: none !important;
 }
 
 a:visited {
-  color: inherit;
+  color: inherit   !important;
 }
 
 nav {
-  width: 100%;
-  justify-content: center;
+  width: 100%  !important;
+  justify-content: center  !important;
 }
 
 nav a {
-  padding: 6px 10px;
-  margin: 0 15px;
-  transition: all 0.2s;
+  padding: 6px 10px  !important;
+  margin: 0 15px  !important;
+  transition: all 0.2s  !important;
 }
 
 nav a:hover {
@@ -138,14 +138,14 @@ nav a:hover {
 }
 
 .refferalBody a{
-  font-weight:bold
+  font-weight:bold;
 }
 
 .page-title {
-  text-align: center;
-  width: 100%;
-  margin: 0;
-  font-size: 2.5rem;
+  text-align: center !important;
+  width: 100% !important;
+  margin: 0 !important;
+  font-size: 2.5rem !important;
 }
 
 .btn,
@@ -153,7 +153,7 @@ nav a:hover {
   font-size: 1.3rem;
   text-decoration: none;
   padding: 0.5rem 1.2rem;
-  margin: 5px 0;
+  margin: 5px 0  !important;
   border-radius: var(--border-radius);
   border: none;
   color: var(--dark);
@@ -175,7 +175,7 @@ nav a:hover {
 }
 
 .btn-inline {
-  display: inline;
+  display: inline  !important;
 }
 
 /* CARDS */
