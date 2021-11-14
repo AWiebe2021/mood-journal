@@ -19,7 +19,7 @@ const Header = () => {
           <p>A journal like no otter.</p>
           </div>
         </Link>
-       
+
 
         <nav className="text-center">
           {Auth.loggedIn() ? (

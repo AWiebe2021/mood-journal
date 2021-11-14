@@ -8,8 +8,7 @@ const resolvers = {
       if (context.user) {
         const userData = await User.findOne({ _id: context.user._id })
           .select('-__v -password')
-          .populate('thoughts')
-          .populate('friends');
+          .populate('thoughts');
 
         return userData;
       }
@@ -19,13 +18,11 @@ const resolvers = {
     users: async () => {
       return User.find()
         .select('-__v -password')
-        .populate('thoughts')
-        .populate('friends');
+        .populate('thoughts');
     },
     user: async (parent, { username }) => {
       return User.findOne({ username })
         .select('-__v -password')
-        .populate('friends')
         .populate('thoughts');
     },
     thoughts: async (parent, { username }) => {
@@ -85,21 +82,6 @@ const resolvers = {
 
         return updatedThought;
       }
-
-      throw new AuthenticationError('You need to be logged in!');
-    },
-    addFriend: async (parent, { friendId }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { friends: friendId } },
-          { new: true }
-        ).populate('friends');
-
-        return updatedUser;
-      }
-
-      throw new AuthenticationError('You need to be logged in!');
     }
   }
 };
