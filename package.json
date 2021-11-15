@@ -17,6 +17,7 @@
     "concurrently": "^5.1.0"
   },
   "dependencies": {
+    "antd": "^4.16.13",
     "bcrypt": "^5.0.1"
   }
 }

@@ -1,60 +1,77 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Redirect, useParams } from 'react-router-dom';
-
+import { Layout, Button, List } from 'antd'
 import { useQuery } from '@apollo/client';
 import { QUERY_USER, QUERY_ME } from '../utils/queries';
+import { DownloadOutlined } from '@ant-design/icons'
 
 import Auth from '../utils/auth';
-
-const Affirmations = () => {
-    const { username: userParam } = useParams();
-
-
-    const { loading, data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
-      variables: { username: userParam },
-    });
+const config = {
+    apiUrl: 'https://type.fit/api/quotes',
+    repoUrl: 'https://github.com/ssokurenko/quotes-react-app'
+  }
   
-    const user = data?.me || data?.user || {};
+  const { Header, Content } = Layout
   
-    // redirect to personal profile page if username is yours
-    if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-      return <Redirect to="/affirmation" />;
-    }
-  
-    if (loading) {
-      return <div>Loading...</div>;
-    }
-  
-    if (!user?.username) {
+  const Affirmations = () => {
+    const [quotes, setQuotes] = useState([])
+    const [isLoading, setIsLoading] = useState(false)
+    const Quote = ({ text, author }) => {
       return (
-        <h4>
-          You need to be logged in to see this. Use the navigation links above to
-          sign up or log in!
-        </h4>
-      );
+        <span>
+          <strong>{text}</strong> &nbsp; <span>{author}</span>
+        </span>
+      )
     }
 
-    return(
-        <div>
-            <div class="card">
-            <h4 class="card-header">
-                Generate an Affirmation
-            </h4>
-            <div class="card-body">
-
-            </div>
-            <button className="btn col-12 col-md-3" type="Generate">
-          Generate
-        </button>
-
-            </div>
-        
-        
-
-
-        </div>
+//     var JSONArray = { :["inbound"] };
+// var stdArray = JSON.parse(JSONArray);
+// var result = stdArray[0];
+  
+    const getQuotes = () => {
+      fetch(config.apiUrl)
+        .then(function (response) {
+          return response.json()
+        })
+        .then((data) => {
+          setQuotes(data)
+          setIsLoading(false)
+        })
+        .catch(() => {
+          setIsLoading(false)
+        })
+    }
+    
+    return (
+      <Layout>
+        <Header>
+          <div className="card-header">
+            <span className="site-logo">Get an Affirmation</span>
+          </div>
+        </Header>
+        <Content className="card">
+          <List
+            size="small"
+            loading={isLoading}
+            bordered
+            dataSource={quotes}
+            renderItem={(quote) => (
+              <List.Item>
+                <Quote text={quote.text} author={quote.author} />
+              </List.Item>
+              
+            )}
+            />
+               <Button className="btn col-12 col-md-3"
+                onClick={() => getQuotes()}
+                type="primary"
+                disabled={isLoading}
+                size="large">
+                Generate
+              </Button>
+        </Content>
+      </Layout>
     )
-
-}
+  }
 
 export default Affirmations;
