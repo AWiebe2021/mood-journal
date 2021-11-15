@@ -1,10 +1,10 @@
-import React from 'react';
-import EntryList from '../components/EntryList';
-import EntryForm from '../components/EntryForm';
-
-import Auth from '../utils/auth';
-import { useQuery } from '@apollo/client';
-import { QUERY_ENTRYS } from '../utils/queries';
+import React from "react";
+import EntryList from "../components/EntryList";
+import EntryForm from "../components/EntryForm";
+import Auth from "../utils/auth";
+import { useQuery } from "@apollo/client";
+import { QUERY_ENTRYS } from "../utils/queries";
+import { isOutputType } from "graphql";
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ENTRYS);
@@ -12,6 +12,7 @@ const Home = () => {
   const entrys = data?.entrys || [];
 
   const loggedIn = Auth.loggedIn();
+
 
   return (
     <main>
@@ -21,8 +22,10 @@ const Home = () => {
             <EntryForm />
           </div>
         )}
-        {/* sliders here*/}
-      </div>
+  
+     
+        </div>
+     
     </main>
   );
 };

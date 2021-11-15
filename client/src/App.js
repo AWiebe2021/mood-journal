@@ -17,6 +17,7 @@ import Home from './pages/Home';
 import NoMatch from './pages/NoMatch';
 import SingleEntry from './pages/SingleEntry';
 import Profile from './pages/Profile';
+import Affirmations from './pages/Affirmations';
 // import Signup from './pages/Signup';
 
 const httpLink = createHttpLink({
@@ -53,6 +54,7 @@ function App() {
               <Route exact path="/" component={Home} />
               <Route exact path="/profile/:username?" component={Profile} />
               <Route exact path="/entry/:id" component={SingleEntry} />
+              <Route exact path="/Affirmations" component={Affirmations} />
 
               <Route component={NoMatch} />
             </Switch>

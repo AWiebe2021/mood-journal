@@ -30,9 +30,14 @@ const Header = () => {
               {/* if user is logged in show saved books and logout */}
               {Auth.loggedIn() ? (
                 <>
+              
                   <Nav.Link as={Link} to='/profile'>
                   Me
                   </Nav.Link>
+                  <Nav.Link as={Link} to='/affirmations'>
+                    Affirmations
+                  </Nav.Link>
+
                   <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
                 </>
               ) : (
@@ -54,10 +59,10 @@ const Header = () => {
               <Modal.Title id='signup-modal'>
                 <Nav variant='pills'>
                   <Nav.Item>
-                    <Nav.Link eventKey='login'>Login</Nav.Link>
+                    <Nav.Link eventKey='login' className="pill " >Login</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
+                    <Nav.Link eventKey='signup' className="pill " >Sign Up</Nav.Link>
                   </Nav.Item>
                 </Nav>
               </Modal.Title>
