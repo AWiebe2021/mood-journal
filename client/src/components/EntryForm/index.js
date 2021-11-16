@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
-
-import { useMutation } from '@apollo/client';
-import { ADD_ENTRY } from '../../utils/mutations';
-import { QUERY_ENTRYS, QUERY_ME } from '../../utils/queries';
+import React, { useState } from "react";
+import { useMutation } from "@apollo/client";
+import { ADD_ENTRY } from "../../utils/mutations";
+import { QUERY_ENTRYS, QUERY_ME } from "../../utils/queries";
 
 const EntryForm = () => {
-  const [entryText, setText] = useState('');
+  const [entryText, setText] = useState("");
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addEntry, { error }] = useMutation(ADD_ENTRY, {
@@ -49,17 +48,22 @@ const EntryForm = () => {
       });
 
       // clear form value
-      setText('');
+      setText("");
       setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
+
+    // const moodSlider = document.getElementById(mood)
+    // const dietSlider = document.getElementById(diet)
+    // const sleepSlider = document.getElementById(sleep)
+    // const output = document.getElementById(value)
   };
 
-  return (
+  return(
     <div>
       <p
-        className={`m-0 ${characterCount === 280 || error ? 'text-error' : ''}`}
+        className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
         {error && <span className="ml-2">Something went wrong...</span>}
@@ -69,11 +73,32 @@ const EntryForm = () => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="Here's a new entry..."
+          placeholder="If you can't think of anyhting to write, click on the Affirmations tab to have one generated..."
           value={entryText}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
         ></textarea>
+        <div class="sliders">
+          <div className="flex-row justify-center justify-space-between-md align-stretch">
+            <h5> How much did you sleep today?</h5>
+            <input id="sleep" name="sleep" type="range" min="0" max="100" />
+            <span>😴</span>
+            <span>😄</span>
+          </div>
+          <div className="flex-row justify-center justify-space-between-md align-stretch">
+            <h5> How much did you eat today?</h5>
+            <input id="diet" name="diet" type="range" min="0" max="100" />{" "}
+            <span>😴</span>
+            <span>😄</span>
+          </div>
+          <div className="flex-row justify-center justify-space-between-md align-stretch">
+            <h5> How did you feel today?</h5>
+            <input id="mood" name="mood" type="range" min="0" max="100" />
+            <span>😴</span>
+            <span>😄</span>
+          </div>
+        </div>
+
         <button className="btn col-12 col-md-3" type="submit">
           Submit
         </button>

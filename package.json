@@ -16,5 +16,8 @@
   "devDependencies": {
     "concurrently": "^5.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "antd": "^4.16.13",
+    "bcrypt": "^5.0.1"
+  }
 }

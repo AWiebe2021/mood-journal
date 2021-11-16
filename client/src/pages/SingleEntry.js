@@ -29,6 +29,7 @@ const SingleEntry = (props) => {
         </p>
         <div className="card-body">
           <p>{entry.entryText}</p>
+          
         </div>
       </div>
     </div>
