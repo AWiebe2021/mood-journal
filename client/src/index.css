@@ -1,3 +1,6 @@
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+
 :root {
   --primary: #fffff !important;
   --secondary: #AFD2D8 !important;
@@ -197,6 +200,62 @@ nav a:hover {
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+}
+/* CHART */
+.chart {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  margin: 3em auto;
+}
+
+.chart::before,
+.chart::after {
+  display: inline-block;
+  font-size: 0.875em;
+}
+
+.chart::before {
+  display: inline-block;
+  position: absolute;
+  left: -4.5em;
+  top: -6px;
+  content: "Best \a Good \a Average \a Ok \a Bad";
+  white-space: pre;
+  height: 100%;
+  line-height: 4.2;
+  text-align: right;
+}
+
+.chart::after {
+  content: "Day1 Today";
+  width: 100%;
+  margin-left: 0%;
+  word-spacing: 36.5em;
+  padding-top: 35%;
+}
+
+.dataset {
+  fill-opacity: 0.8;
+  filter: url(#dropshadow);
+}
+
+#dataset-1 {
+  fill: #50E3C2;
+}
+
+#dataset-2 {
+  fill: #21A6EE;
+}
+
+#dataset-3 {
+  fill: #807CCC;
+}
+
+.dataset {
+  transform-origin: bottom;
+  transform: scaleY(0.01);
+  opacity: 0.5;
 }
 
 /* FORM */
