@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { useMutation } from "@apollo/client";
 import { ADD_ENTRY } from "../../utils/mutations";
 import { QUERY_ENTRYS, QUERY_ME } from "../../utils/queries";
@@ -61,7 +60,7 @@ const EntryForm = () => {
     // const output = document.getElementById(value)
   };
 
-  return (
+  return(
     <div>
       <p
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
@@ -74,7 +73,7 @@ const EntryForm = () => {
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="If you can't thing of anyhting to write, click on the Affirmations tab to have on generated..."
+          placeholder="If you can't think of anyhting to write, click on the Affirmations tab to have one generated..."
           value={entryText}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
@@ -82,7 +81,6 @@ const EntryForm = () => {
         <div class="sliders">
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How much did you sleep today?</h5>
-
             <input id="sleep" name="sleep" type="range" min="0" max="100" />
             <span>😴</span>
             <span>😄</span>
