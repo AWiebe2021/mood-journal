@@ -1,5 +1,5 @@
 # Interactive MERN SPA Project 
-#Mood Journal
+
 
 ## Description 
 
