@@ -59,6 +59,6 @@ The projects code can be accessed at: https://github.com/AWiebe2021/mood-journal
 ![mood-journal Screenshot](./Screenshot.png)
 
 ## Credits
-Team 1
+Team 1 <br>
 Aaron Wiebe - https://awiebe2021.github.io/awiebe-portfolio/ <br>
 Valeria Mercado - https://sxwqsd.github.io/ <br>
