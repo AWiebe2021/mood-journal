@@ -11,28 +11,28 @@ Challenge Elements
 The group will use everything you’ve learned throughout this course to create a MERN stack single-page application that works with real-world data to solve a real-world challenge, with a focus on user demand. The user story and acceptance criteria will depend on the project that you create, but your project must fulfill some specific requirements. 
 
 Technologies Used<br><br>
-●HTML/CSS/Git<br>
-●JavaScript<br>
-●ant-design/icons: 4.7.0<br>
-●apollo-server-express: 3.3.0<br>
-●bcrypt: 5.0.1<br>
-●bootstrap: 5.1.3<br>
-●chart.js: 3.6.0<br>
-●express: 4.17.1<br>
-●faker: 4.1.0<br>
-●graphql: 15.5.0<br>
-●hooks: 0.3.2<br>
-●jquery: 3.6.0<br>
-●jsonwebtoken: 8.5.1<br>
-●jwt-decode: 3.1.2<br>
-●mongoose: 5.9.9<br>
-●react: 17.0.2<br>
-●react-bootstrap: 2.0.2<br>
-●react-chartjs-2: 3.3.0<br>
-●react-dom: 17.0.<br>
-●react-router-dom: 5.2.0<br>
-●react-scripts: 4.0.3<br>
-●web-vitals: 1.0.1
+● HTML/CSS/Git<br>
+● JavaScript<br>
+● ant-design/icons: 4.7.0<br>
+● apollo-server-express: 3.3.0<br>
+● bcrypt: 5.0.1<br>
+● bootstrap: 5.1.3<br>
+● chart.js: 3.6.0<br>
+● express: 4.17.1<br>
+● faker: 4.1.0<br>
+● graphql: 15.5.0<br>
+● hooks: 0.3.2<br>
+● jquery: 3.6.0<br>
+● jsonwebtoken: 8.5.1<br>
+● jwt-decode: 3.1.2<br>
+● mongoose: 5.9.9<br>
+● react: 17.0.2<br>
+● react-bootstrap: 2.0.2<br>
+● react-chartjs-2: 3.3.0<br>
+● react-dom: 17.0.<br>
+● react-router-dom: 5.2.0<br>
+● react-scripts: 4.0.3<br>
+● web-vitals: 1.0.1
 
 our project should fulfill the following requirements:
 
