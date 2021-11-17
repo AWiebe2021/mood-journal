@@ -17,8 +17,8 @@
     "concurrently": "^6.4.0"
   },
   "dependencies": {
-    "antd": "^4.16.13",
     "@apollo/react-hooks": "^4.0.0",
+    "antd": "^4.16.13",
     "apollo-server-core": "^3.5.0",
     "apollo-server-express": "^2.25.3",
     "express": "^4.17.1",
