@@ -1,6 +1,5 @@
 @import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
-@import "react-slideshow-image/dist/styles.css";
 
 :root {
   --primary: #fffff !important;
