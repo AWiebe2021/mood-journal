@@ -103,6 +103,14 @@ nav a:hover {
   color: var(--secondary) !important;
   background-color: var(--dark) !important;
 }
+nav h1:hover {
+  color: var(--secondary) !important;
+  background-color: var(--dark) !important;
+}
+
+.sneakySlide{
+ visibility:hidden;
+}
 .typewriter p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid #015A67; /* The typwriter cursor */
@@ -247,9 +255,6 @@ input[type="range"]:after {
   width: 100%;
 }
 
-.max {
- margin-left: var(--spacing-two);
-}
 
 
 .refferalBody{
@@ -483,6 +488,10 @@ input[type="range"]:after {
 }
 
 /* HEIGHT / WIDTH UTILS */
+.w-0 {
+  width: 0%;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -508,7 +517,6 @@ input[type="range"]:after {
 }
 
 /* MARGIN/PADDING UTILS */
-
 /* Margin - all sides */
 .m-0 {
   margin: 0;

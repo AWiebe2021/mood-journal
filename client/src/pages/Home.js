@@ -5,6 +5,10 @@ import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
 import { QUERY_ENTRYS } from "../utils/queries";
 import { isOutputType } from "graphql";
+import Slideshow from "../components/SlideShow";
+
+
+
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_ENTRYS);
@@ -13,19 +17,25 @@ const Home = () => {
 
   const loggedIn = Auth.loggedIn();
 
-
   return (
-    <main>
+    <main>      
       <div className="flex-row justify-space-between">
+      {!loggedIn && (
+       <div className="col-12 mb-3">
+            <Slideshow />
+          </div>
+        )}
+      
+    
         {loggedIn && (
-          <div className="col-12 mb-3">
+       <div className="col-12 mb-3">
             <EntryForm />
           </div>
         )}
-  
-     
-        </div>
-     
+      </div>
+      <div>
+    
+      </div>
     </main>
   );
 };
