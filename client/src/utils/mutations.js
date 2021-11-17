@@ -25,8 +25,8 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_ENTRY = gql`
-  mutation addEntry($entryText: String!) {
-    addEntry(entryText: $entryText) {
+  mutation addEntry($entryText: String!, $sleepSlider: Int!, $dietSlider: Int!, $moodSlider: Int!) {
+    addEntry(entryText: $entryText, sleepSlider: $sleepSlider, dietSlider: $dietSlider, moodSlider: $moodSlider) {
       _id
       entryText
       createdAt
