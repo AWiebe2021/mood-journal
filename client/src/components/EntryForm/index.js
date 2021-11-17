@@ -81,21 +81,21 @@ const EntryForm = () => {
         <div class="sliders">
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How much did you sleep today?</h5>
-            <input id="sleep" name="sleep" type="range" min="0" max="100" />
-            <span>😴</span>
-            <span>😄</span>
+            <input id="sleep" name="sleep" type="range" min="0" max="20" />
+            <span class="w-100"> 😴</span>
+            <span class="w-0">😄</span>
           </div>
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How much did you eat today?</h5>
-            <input id="diet" name="diet" type="range" min="0" max="100" />{" "}
-            <span>😴</span>
-            <span>😄</span>
+            <input id="diet" name="diet" type="range" min="0" max="20" />
+            <span class="w-100">🍽</span>
+            <span class="w-0">🥞</span>
           </div>
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How did you feel today?</h5>
-            <input id="mood" name="mood" type="range" min="0" max="100" />
-            <span>😴</span>
-            <span>😄</span>
+            <input id="mood" name="mood" type="range" min="0" max="20" />
+            <span class="w-100">☹️</span>
+            <span class="w-0">😁</span>
           </div>
         </div>
 

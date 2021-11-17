@@ -1,3 +1,7 @@
+@import url("https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@import "react-slideshow-image/dist/styles.css";
+
 :root {
   --primary: #fffff !important;
   --secondary: #AFD2D8 !important;
@@ -99,6 +103,14 @@ nav a {
 nav a:hover {
   color: var(--secondary) !important;
   background-color: var(--dark) !important;
+}
+nav h1:hover {
+  color: var(--secondary) !important;
+  background-color: var(--dark) !important;
+}
+
+.sneakySlide{
+ visibility:hidden;
 }
 .typewriter p {
   overflow: hidden; /* Ensures the content is not revealed until the animation */
@@ -244,8 +256,8 @@ input[type="range"]:after {
   width: 100%;
 }
 
-.max {
- margin-left: var(--spacing-two);
+.minEmoji {
+
 }
 
 
@@ -317,6 +329,62 @@ input[type="range"]:after {
 .card-body {
   padding: 2.5%;
   font-size: 1.4rem;
+}
+/* CHART */
+.chart {
+  position: relative;
+  width: 560px;
+  height: 560px;
+  margin: 3em auto;
+}
+
+.chart::before,
+.chart::after {
+  display: inline-block;
+  font-size: 0.875em;
+}
+
+.chart::before {
+  display: inline-block;
+  position: absolute;
+  left: -4.5em;
+  top: -6px;
+  content: "Best \a Good \a Average \a Ok \a Bad";
+  white-space: pre;
+  height: 100%;
+  line-height: 4.2;
+  text-align: right;
+}
+
+.chart::after {
+  content: "Day1 Today";
+  width: 100%;
+  margin-left: 0%;
+  word-spacing: 36.5em;
+  padding-top: 35%;
+}
+
+.dataset {
+  fill-opacity: 0.8;
+  filter: url(#dropshadow);
+}
+
+#dataset-1 {
+  fill: #50E3C2;
+}
+
+#dataset-2 {
+  fill: #21A6EE;
+}
+
+#dataset-3 {
+  fill: #807CCC;
+}
+
+.dataset {
+  transform-origin: bottom;
+  transform: scaleY(0.01);
+  opacity: 0.5;
 }
 
 /* FORM */
@@ -424,6 +492,10 @@ input[type="range"]:after {
 }
 
 /* HEIGHT / WIDTH UTILS */
+.w-0 {
+  width: 0%;
+}
+
 .w-100 {
   width: 100%;
 }
@@ -449,7 +521,6 @@ input[type="range"]:after {
 }
 
 /* MARGIN/PADDING UTILS */
-
 /* Margin - all sides */
 .m-0 {
   margin: 0;
