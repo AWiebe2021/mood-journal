@@ -48,11 +48,9 @@ const Profile = (props) => {
     <div>
       <div className="flex-row mb-3">
         <h2 className="bg-secondary col-12">
-        {/* <canvas id="myChart" width="400" height="400"></canvas> */}
         <>
-<LineChart/>
-    </>
-
+          <LineChart/>
+        </>
         </h2>
       </div>
       <div className="flex-row justify-space-between mb-3">

@@ -20,7 +20,7 @@ const data = {
     },
     {
       label: 'Mood',
-      data: [6, 12,2, 1, 5, 3],
+      data: [6, 12, 2, 1, 5, 3],
       fill: false,
       backgroundColor: 'rgb(60, 179, 113)',
       borderColor: 'rgba(60, 179, 113, 0.7)',
@@ -42,12 +42,7 @@ const LineChart = () => (
     <div className='header'>
       <h1 className='title'>Entry Chart</h1>
       <div className='links'>
-        {/* <a
-          className='btn btn-gh'
-          href='https://github.com/reactchartjs/react-chartjs-2/blob/master/example/src/charts/Line.js'
-        >
-          Github Source
-        </a> */}
+
       </div>
     </div>
     <Line data={data} options={options} />
