@@ -1,2 +1,2 @@
 node_modules
-!log.js
+!/server/node_modules/npmlog/lib/log.js
