@@ -43,8 +43,11 @@ const EntryForm = () => {
     event.preventDefault();
 
     try {
+      var sleepSlider = document.getElementById("sleep").value;
+      var dietSlider = document.getElementById("diet").value;
+      var moodSlider = document.getElementById("mood").value;
       await addEntry({
-        variables: { entryText },
+        variables: { entryText, sleepSlider, dietSlider, moodSlider },
       });
 
       // clear form value
@@ -59,6 +62,9 @@ const EntryForm = () => {
     // const sleepSlider = document.getElementById(sleep)
     // const output = document.getElementById(value)
   };
+
+// var output = document.getElementById("demo");
+// output.innerHTML = slider.value; // Display the default slider value
 
   return(
     <div>
@@ -81,21 +87,21 @@ const EntryForm = () => {
         <div class="sliders">
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How much did you sleep today?</h5>
-            <input id="sleep" name="sleep" type="range" min="0" max="20" />
-            <span class="w-100"> 😴</span>
-            <span class="w-0">😄</span>
+            <input id="sleep" name="sleep" step="5" type="range" min="0" max="100" />
+            <span>😴</span>
+            <span>😄</span>
           </div>
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How much did you eat today?</h5>
-            <input id="diet" name="diet" type="range" min="0" max="20" />
-            <span class="w-100">🍽</span>
-            <span class="w-0">🥞</span>
+            <input id="diet" name="diet" step="5" type="range" min="0" max="100" />{" "}
+            <span>😴</span>
+            <span>😄</span>
           </div>
           <div className="flex-row justify-center justify-space-between-md align-stretch">
             <h5> How did you feel today?</h5>
-            <input id="mood" name="mood" type="range" min="0" max="20" />
-            <span class="w-100">☹️</span>
-            <span class="w-0">😁</span>
+            <input id="mood" name="mood" step="5" type="range" min="0" max="100" />
+            <span>😴</span>
+            <span>😄</span>
           </div>
         </div>
 

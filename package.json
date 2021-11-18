@@ -1,25 +1,32 @@
 {
-  "name": "mern-social-media",
-  "version": "1.0.0",
-  "description": "",
-  "main": "server/server.js",
-  "scripts": {
-    "start": "node server/server.js",
-    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "cd server && npm run seed",
-    "build": "cd client && npm run build"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^5.1.0"
-  },
-  "dependencies": {
-    "antd": "^4.16.13",
-    "install": "^0.13.0",
-    "react-responsive-carousel": "^3.2.22",
-    "react-slideshow-image": "^3.6.0"
+    "name": "mood-journal",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server/server.js",
+    "scripts": {
+      "start": "node server/server.js",
+      "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+      "install": "cd server && npm i && cd ../client && npm i",
+      "seed": "cd server && npm run seed",
+      "build": "cd client && npm run build"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+      "concurrently": "^6.4.0"
+    },
+    "dependencies": {
+      "@apollo/react-hooks": "^4.0.0",
+      "apollo-server-core": "^3.5.0",
+      "apollo-server-express": "^2.25.3",
+      "express": "^4.17.1",
+      "express-graphql": "^0.12.0",
+      "graphql": "^16.0.1",
+      "if-env": "^1.0.4",
+      "web-vitals": "^2.1.2",
+      "antd": "^4.16.13",
+      "react-responsive-carousel": "^3.2.22",
+      "react-slideshow-image": "^3.6.0"
+    }
   }
-}
