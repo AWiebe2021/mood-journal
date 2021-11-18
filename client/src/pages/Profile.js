@@ -4,7 +4,7 @@ import { Redirect, useParams } from "react-router-dom";
 
 import LineChart from "./line.js";
 
-import EntryForm from "../components/EntryForm";
+// import EntryForm from "../components/EntryForm";
 import EntryList from "../components/EntryList";
 
 import { useQuery } from "@apollo/client";
@@ -61,7 +61,7 @@ const Profile = (props) => {
           />
         </div>
       </div>
-      <div className="mb-3">{!userParam && <EntryForm />}</div>
+      {/* <div className="mb-3">{!userParam && <EntryForm />}</div> */}
     </div>
   );
 };

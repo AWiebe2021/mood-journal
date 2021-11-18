@@ -1,11 +1,6 @@
 import React, { useState } from "react";
-import { Redirect, useParams } from "react-router-dom";
+
 import { Layout, Button, List } from "antd";
-import { useQuery } from "@apollo/client";
-import { QUERY_USER, QUERY_ME } from "../utils/queries";
-
-
-import Auth from "../utils/auth";
 
 const config = {
   apiUrl: "https://type.fit/api/quotes",

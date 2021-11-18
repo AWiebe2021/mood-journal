@@ -17,19 +17,19 @@ const entrySchema = new Schema(
     username: {
       type: String,
       required: true
-    },
-    sleepSlider: {
-      type: Number,
-      required: true
-    },
-    dietSlider: {
-      type: Number,
-      required: true
-    },
-    moodSlider: {
-      type: Number,
-      required: true
     }
+    // sleepSlider: {
+    //   type: Number,
+    //   required: true
+    // },
+    // dietSlider: {
+    //   type: Number,
+    //   required: true
+    // },
+    // moodSlider: {
+    //   type: Number,
+    //   required: true
+    // }
   },
   {
     toJSON: {

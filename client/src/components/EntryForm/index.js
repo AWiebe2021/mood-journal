@@ -1,21 +1,22 @@
-import React, { useState } from "react";
-import { useMutation } from "@apollo/client";
-import { ADD_ENTRY } from "../../utils/mutations";
-import { QUERY_ENTRYS, QUERY_ME } from "../../utils/queries";
+import React, { useState } from 'react';
+
+import { useMutation } from '@apollo/react-hooks';
+import { ADD_ENTRY } from '../../utils/mutations';
+import { QUERY_ENTRYS, QUERY_ME } from '../../utils/queries';
 
 const EntryForm = () => {
-  const [entryText, setText] = useState("");
+  const [entryText, setText] = useState('');
   const [characterCount, setCharacterCount] = useState(0);
 
   const [addEntry, { error }] = useMutation(ADD_ENTRY, {
     update(cache, { data: { addEntry } }) {
       try {
-        // update entry array's cache
+        // update thought array's cache
         // could potentially not exist yet, so wrap in a try/catch
         const { entrys } = cache.readQuery({ query: QUERY_ENTRYS });
         cache.writeQuery({
           query: QUERY_ENTRYS,
-          data: { entrys: [addEntry, ...entrys] },
+          data: { entrys: [addEntry, ...entrys] }
         });
       } catch (e) {
         console.error(e);
@@ -25,13 +26,13 @@ const EntryForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, entrys: [...me.entrys, addEntry] } },
+        data: { me: { ...me, entrys: [...me.entrys, addEntry] } }
       });
-    },
+    }
   });
 
   // update state based on form input changes
-  const handleChange = (event) => {
+  const handleChange = event => {
     if (event.target.value.length <= 280) {
       setText(event.target.value);
       setCharacterCount(event.target.value.length);
@@ -39,32 +40,21 @@ const EntryForm = () => {
   };
 
   // submit form
-  const handleFormSubmit = async (event) => {
+  const handleFormSubmit = async event => {
     event.preventDefault();
 
     try {
-      var sleepSlider = document.getElementById("sleep").value;
-      var dietSlider = document.getElementById("diet").value;
-      var moodSlider = document.getElementById("mood").value;
       await addEntry({
-        variables: { entryText, sleepSlider, dietSlider, moodSlider },
+        variables: { entryText }
       });
 
       // clear form value
-      setText("");
+      setText('');
       setCharacterCount(0);
     } catch (e) {
       console.error(e);
     }
-
-    // const moodSlider = document.getElementById(mood)
-    // const dietSlider = document.getElementById(diet)
-    // const sleepSlider = document.getElementById(sleep)
-    // const output = document.getElementById(value)
   };
-
-// var output = document.getElementById("demo");
-// output.innerHTML = slider.value; // Display the default slider value
 
   return(
     <div>
@@ -72,14 +62,14 @@ const EntryForm = () => {
         className={`m-0 ${characterCount === 280 || error ? "text-error" : ""}`}
       >
         Character Count: {characterCount}/280
-        {error && <span className="ml-2">Something went wrong...</span>}
+        {/* {error && <span className="ml-2">Something went wrong...</span>} */}
       </p>
       <form
         className="flex-row justify-center justify-space-between-md align-stretch"
         onSubmit={handleFormSubmit}
       >
         <textarea
-          placeholder="If you can't think of anyhting to write, click on the Affirmations tab to have one generated..."
+          placeholder="If you can't think of anything to write, click on the Affirmations tab to have one generated..."
           value={entryText}
           className="form-input col-12 col-md-9"
           onChange={handleChange}
@@ -104,7 +94,6 @@ const EntryForm = () => {
             <span>😄</span>
           </div>
         </div>
-
         <button className="btn col-12 col-md-3" type="submit">
           Submit
         </button>

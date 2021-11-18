@@ -5,9 +5,7 @@ const typeDefs = gql`
     _id: ID
     username: String
     email: String
-    friendCount: Int
     entrys: [Entry]
-    friends: [User]
   }
 
   type Entry {

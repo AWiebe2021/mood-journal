@@ -32,7 +32,7 @@ const Header = () => {
                 <>
               
                   <Nav.Link as={Link} to='/profile'>
-                  Me
+                  Profile
                   </Nav.Link>
                   <Nav.Link as={Link} to='/affirmations'>
                     Affirmations
