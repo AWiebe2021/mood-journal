@@ -52,7 +52,7 @@ our project should fulfill the following requirements:
 
 ## Installation
 
-The project can be viewed at: https://mood-journal.herokuapp.com/ <br>
+The project can be viewed at: https://quiet-waters-13147.herokuapp.com/ <br>
 The projects code can be accessed at: https://github.com/AWiebe2021/mood-journal
 
 ## Screenshot
